@@ -998,3 +998,13 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.05.26-14.31.17:435][139]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2022.05.26-14.31.17:508][139]LogUObjectHash: Compacting FUObjectHashTables data took   7.90ms
 [2022.05.26-14.31.17:560][140]LogPlayLevel: Display: Destroying online subsystem :Context_6
+[2022.05.26-14.39.14:892][141]LogUObjectHash: Compacting FUObjectHashTables data took   6.88ms
+[2022.05.26-14.39.14:893][141]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/TankContent/TankLevel' took 0.091
+[2022.05.26-14.39.14:894][141]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/TankContent/BP_Tank] ([2] browsable assets)...
+[2022.05.26-14.39.14:936][141]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/TankContent/BP_Tank.BP_Tank]
+[2022.05.26-14.39.14:945][141]LogActor: Warning: BP_Tank_C /Engine/Transient.World_5:PersistentLevel.BP_Tank_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.05.26-14.39.14:997][141]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/TankContent/BP_Tank.BP_Tank_C]
+[2022.05.26-14.39.14:997][141]OBJ SavePackage: Finished generating thumbnails for package [/Game/TankContent/BP_Tank]
+[2022.05.26-14.39.14:998][141]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/TankContent/BP_Tank" FILE="../../../../../Tanks/SuperTanks/Saved/Autosaves/Game/TankContent/BP_Tank_Auto1.uasset" SILENT=false AUTOSAVING=true
+[2022.05.26-14.39.15:048][141]LogSavePackage: Moving '../../../../../Tanks/SuperTanks/Saved/BP_Tank_Auto132E33A404642AF0FE62AE899A6DC41C6.tmp' to '../../../../../Tanks/SuperTanks/Saved/Autosaves/Game/TankContent/BP_Tank_Auto1.uasset'
+[2022.05.26-14.39.15:049][141]LogFileHelpers: Auto-saving content packages took 0.156
