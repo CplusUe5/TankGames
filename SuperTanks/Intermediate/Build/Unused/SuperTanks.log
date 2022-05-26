@@ -1,0 +1,257 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Tanks).
+  Building SuperTanksEditor...
+  Using Visual Studio 2019 14.29.30145 toolchain (D:\vs\VC\Tools\MSVC\14.29.30133) and Windows 10.0.17763.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 7 actions with 16 processes...
+    [1/7] TankController.cpp
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h(10): error C2079: "ATankController" использует не имеющую определения структуру class "SUPERTANK_API"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h(10): error C2143: синтаксическая ошибка: отсутствие ";" перед ":"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h(10): error C2059: синтаксическая ошибка: :
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h(10): error C2059: синтаксическая ошибка: public
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h(11): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h(11): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2079: "ATankPawn" использует не имеющую определения структуру class "SUPERTANK_API"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2143: синтаксическая ошибка: отсутствие ";" перед ":"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2059: синтаксическая ошибка: :
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2059: синтаксическая ошибка: public
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(13): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(13): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(7): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(8): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(10): error C4508: {ctor}: функция должна возвращать значение; предполагается возвращаемый тип "void"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(12): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(14): error C2653: Super: не является именем класса или пространства имен
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(16): error C2065: InputComponent: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(16): error C2355: "this": может указываться только в нестатических членах-функциях или инициализаторах нестатических членов данных
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(16): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(16): error C2065: MoveForward: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(17): error C2065: InputComponent: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(17): error C2355: "this": может указываться только в нестатических членах-функциях или инициализаторах нестатических членов данных
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(17): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(17): error C2065: MoveSide: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(18): error C2065: InputComponent: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(18): error C2355: "this": может указываться только в нестатических членах-функциях или инициализаторах нестатических членов данных
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(18): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(18): error C2065: MoveRotation: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(21): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(23): error C2653: Super: не является именем класса или пространства имен
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(24): error C2065: TankPawn: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(24): error C3861: GetPawn: идентификатор не найден
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(27): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(29): error C2065: TankPawn: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(32): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(34): error C2065: TankPawn: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(37): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankController.cpp(39): error C2065: TankPawn: необъявленный идентификатор
+    [2/7] TankPawn.cpp
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2079: "ATankPawn" использует не имеющую определения структуру class "SUPERTANK_API"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2143: синтаксическая ошибка: отсутствие ";" перед ":"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2059: синтаксическая ошибка: :
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(12): error C2059: синтаксическая ошибка: public
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(13): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(13): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(7): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(8): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(9): error C2065: PrimaryActorTick: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(11): error C2065: BodyMesh: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(11): error C2065: CreateDefaultSubobject: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(11): error C2275: UStaticMeshComponent: недопустимое использование этого типа в качестве выражения
+    D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(9): note:  см. объявление "UStaticMeshComponent"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(12): error C2065: BodyMesh: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(12): error C2065: RootComponent: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(14): error C2065: TurretMesh: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(14): error C2065: CreateDefaultSubobject: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(14): error C2275: UStaticMeshComponent: недопустимое использование этого типа в качестве выражения
+    D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h(9): note:  см. объявление "UStaticMeshComponent"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(15): error C2065: TurretMesh: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(15): error C2065: BodyMesh: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(17): error C2065: SpringArm: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(17): error C2065: CreateDefaultSubobject: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(17): error C2275: USpringArmComponent: недопустимое использование этого типа в качестве выражения
+    D:\UE\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/SpringArmComponent.h(19): note:  см. объявление "USpringArmComponent"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(18): error C2065: SpringArm: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(18): error C2065: BodyMesh: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(20): error C2065: Camera: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(20): error C2065: CreateDefaultSubobject: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(20): error C2275: UCameraComponent: недопустимое использование этого типа в качестве выражения
+    D:\UE\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h(21): note:  см. объявление "UCameraComponent"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(21): error C2065: Camera: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(21): error C2065: SpringArm: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(22): error C4508: {ctor}: функция должна возвращать значение; предполагается возвращаемый тип "void"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(24): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(26): error C2065: TargetForwardAxisValue: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(29): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(31): error C2065: TargetSideAxisValue: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(34): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(36): error C2065: TargetRotationAxisValue: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(39): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(41): error C2653: Super: не является именем класса или пространства имен
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(43): error C3861: GetActorLocation: идентификатор не найден
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(44): error C3861: GetActorForwardVector: идентификатор не найден
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(45): error C3861: GetActorRightVector: идентификатор не найден
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(46): error C2065: MoveSpeed: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(46): error C2065: TargetForwardAxisValue: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(46): error C2065: TargetSideAxisValue: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(46): error C2065: RightSpeed: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(47): error C3861: SetActorLocation: идентификатор не найден
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(49): error C2065: RotationSpeed: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(49): error C2065: TargetRotationAxisValue: необъявленный идентификатор
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(50): error C3861: GetActorRotation: идентификатор не найден
+D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.cpp(53): error C3861: SetActorRotation: идентификатор не найден
+    [3/7] TankPawn.gen.cpp
+D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(12): error C2079: "ATankPawn" использует не имеющую определения структуру class "SUPERTANK_API"
+D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(12): error C2143: синтаксическая ошибка: отсутствие ";" перед ":"
+D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(12): error C2059: синтаксическая ошибка: :
+D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(12): error C2059: синтаксическая ошибка: public
+D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(13): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(13): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(24): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(29): error C2065: ThisClass: необъявленный идентификатор
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(29): error C2059: синтаксическая ошибка: )
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(32): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(37): error C2065: ThisClass: необъявленный идентификатор
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(37): error C2059: синтаксическая ошибка: )
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(40): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(45): error C2065: ThisClass: необъявленный идентификатор
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(45): error C2059: синтаксическая ошибка: )
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(48): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(50): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(50): error C2672: "StaticClass": не найдена соответствующая перегруженная функция
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(50): error C2783: UClass *StaticClass(void): не удается составить аргумент шаблон для "ClassType"
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/ReflectedTypeAccessors.h(13): note:  см. объявление "StaticClass"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(52): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(53): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(54): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(156): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(156): error C2672: "StaticClass": не найдена соответствующая перегруженная функция
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(156): error C2783: UClass *StaticClass(void): не удается составить аргумент шаблон для "ClassType"
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/ReflectedTypeAccessors.h(13): note:  см. объявление "StaticClass"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(220): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(228): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(236): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(244): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(251): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(258): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(265): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(276): error C2923: TCppClassTypeTraits: "ATankPawn" не является допустимым аргументом типа шаблон для параметра "CPPCLASS"
+    D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(12): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(276): error C2955: "TCppClassTypeTraits": для использования класс шаблон требуется список аргументов шаблон
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/Class.h(2522): note:  см. объявление "TCppClassTypeTraits"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(276): error C4800: Неявное преобразование из "TCppClassTypeTraits<CPPCLASS>::<unnamed-enum-IsAbstract>" в логическое значение. Возможна потеря сведений.
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(277): note: Попробуйте использовать явное приведение или сравнение с 0, чтобы не получать это предупреждение.
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/Class.h(2525): note:  см. объявление "TCppClassTypeTraits<CPPCLASS>::<unnamed-enum-IsAbstract>"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(277): warning C4305: инициализация: усечение из "TCppClassTypeTraits<CPPCLASS>::<unnamed-enum-IsAbstract>" в "bool"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(279): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(279): error C2440: инициализация: невозможно преобразовать "overloaded-function" в "UClass *(__cdecl *)(void)"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(279): note: Конечному типу не соответствует ни одной функции с данным именем в области видимости
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(302): error C2923: TClassCompiledInDefer: "ATankPawn" не является допустимым аргументом типа шаблон для параметра "TClass"
+    D:\Tanks\SuperTanks\Source\SuperTanks/TankPawn.h(12): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(302): error C2514: "TClassCompiledInDefer": невозможно создать шаблон класса.
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectBase.h(291): note:  см. объявление "TClassCompiledInDefer"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(302): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(302): error C3861: StaticPackage: идентификатор не найден
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(302): error C2065: StaticClassFlags: необъявленный идентификатор
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(302): error C2061: синтаксическая ошибка: идентификатор "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(304): error C2912: явная специализация; "UClass *StaticClass<ATankPawn>(void)" не является специализацией функции-шаблона
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(305): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(305): error C2672: "StaticClass": не найдена соответствующая перегруженная функция
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(305): error C2783: UClass *StaticClass(void): не удается составить аргумент шаблон для "ClassType"
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/ReflectedTypeAccessors.h(13): note:  см. объявление "StaticClass"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(307): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(307): error C2664: "FCompiledInDefer::FCompiledInDefer(UClass *(__cdecl *)(void),UClass *(__cdecl *)(void),const TCHAR *,const TCHAR *,bool,const TCHAR *,const TCHAR *,void (__cdecl *)(TMap<FName,FName,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<KeyType,ValueType,false>> &))": невозможно преобразовать аргумент 2 из "UClass *(__cdecl *)(void)" в "UClass *(__cdecl *)(void)"
+            with
+            [
+                KeyType=FName,
+                ValueType=FName
+            ]
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(307): note: Конечному типу не соответствует ни одной функции с данным именем в области видимости
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectBase.h(316): note:  см. объявление "FCompiledInDefer::FCompiledInDefer"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(308): error C2027: использование неопределенного типа "ATankPawn"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h(108): note:  см. объявление "ATankPawn"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(308): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(308): error C2550: {ctor}: список инициализации конструктора должен использоваться только в месте определения конструктора
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.gen.cpp(308): error C4508: {ctor}: функция должна возвращать значение; предполагается возвращаемый тип "void"
+    [4/7] TankController.gen.cpp
+D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(10): error C2079: "ATankController" использует не имеющую определения структуру class "SUPERTANK_API"
+D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(10): error C2143: синтаксическая ошибка: отсутствие ";" перед ":"
+D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(10): error C2059: синтаксическая ошибка: :
+D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(10): error C2059: синтаксическая ошибка: public
+D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(11): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(11): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(22): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(27): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(27): error C2672: "StaticClass": не найдена соответствующая перегруженная функция
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(27): error C2783: UClass *StaticClass(void): не удается составить аргумент шаблон для "ClassType"
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/ReflectedTypeAccessors.h(13): note:  см. объявление "StaticClass"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(59): error C2615: offsetof нельзя применить к типу, не являющемуся классом, "int"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(64): error C2923: TCppClassTypeTraits: "ATankController" не является допустимым аргументом типа шаблон для параметра "CPPCLASS"
+    D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(10): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(64): error C2955: "TCppClassTypeTraits": для использования класс шаблон требуется список аргументов шаблон
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/Class.h(2522): note:  см. объявление "TCppClassTypeTraits"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(64): error C4800: Неявное преобразование из "TCppClassTypeTraits<CPPCLASS>::<unnamed-enum-IsAbstract>" в логическое значение. Возможна потеря сведений.
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(65): note: Попробуйте использовать явное приведение или сравнение с 0, чтобы не получать это предупреждение.
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/Class.h(2525): note:  см. объявление "TCppClassTypeTraits<CPPCLASS>::<unnamed-enum-IsAbstract>"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(65): warning C4305: инициализация: усечение из "TCppClassTypeTraits<CPPCLASS>::<unnamed-enum-IsAbstract>" в "bool"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(67): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(67): error C2440: инициализация: невозможно преобразовать "overloaded-function" в "UClass *(__cdecl *)(void)"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(67): note: Конечному типу не соответствует ни одной функции с данным именем в области видимости
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(90): error C2923: TClassCompiledInDefer: "ATankController" не является допустимым аргументом типа шаблон для параметра "TClass"
+    D:\Tanks\SuperTanks\Source\SuperTanks/TankController.h(10): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(90): error C2514: "TClassCompiledInDefer": невозможно создать шаблон класса.
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectBase.h(291): note:  см. объявление "TClassCompiledInDefer"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(90): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(90): error C3861: StaticPackage: идентификатор не найден
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(90): error C2065: StaticClassFlags: необъявленный идентификатор
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(90): error C2061: синтаксическая ошибка: идентификатор "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(92): error C2912: явная специализация; "UClass *StaticClass<ATankController>(void)" не является специализацией функции-шаблона
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(93): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(93): error C2672: "StaticClass": не найдена соответствующая перегруженная функция
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(93): error C2783: UClass *StaticClass(void): не удается составить аргумент шаблон для "ClassType"
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/ReflectedTypeAccessors.h(13): note:  см. объявление "StaticClass"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(95): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(95): error C2664: "FCompiledInDefer::FCompiledInDefer(UClass *(__cdecl *)(void),UClass *(__cdecl *)(void),const TCHAR *,const TCHAR *,bool,const TCHAR *,const TCHAR *,void (__cdecl *)(TMap<FName,FName,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<KeyType,ValueType,false>> &))": невозможно преобразовать аргумент 2 из "UClass *(__cdecl *)(void)" в "UClass *(__cdecl *)(void)"
+            with
+            [
+                KeyType=FName,
+                ValueType=FName
+            ]
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(95): note: Конечному типу не соответствует ни одной функции с данным именем в области видимости
+    D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectBase.h(316): note:  см. объявление "FCompiledInDefer::FCompiledInDefer"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(96): error C2027: использование неопределенного типа "ATankController"
+    D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h(90): note:  см. объявление "ATankController"
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(96): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(96): error C2550: {ctor}: список инициализации конструктора должен использоваться только в месте определения конструктора
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.gen.cpp(96): error C4508: {ctor}: функция должна возвращать значение; предполагается возвращаемый тип "void"
+D:\vs\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: выход из команды "D:\UE\UE_4.27\Engine\Build\BatchFiles\Build.bat SuperTanksEditor Win64 Development -Project="D:\Tanks\SuperTanks\SuperTanks.uproject" -WaitMutex -FromMsBuild" с кодом 6.

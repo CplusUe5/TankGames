@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Tanks\\SuperTanks\\Source\\SuperTanks\\SuperTanks.Build.cs",
+		"D:\\Tanks\\SuperTanks\\Source\\SuperTanks.Target.cs",
+		"D:\\Tanks\\SuperTanks\\Source\\SuperTanksEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}
