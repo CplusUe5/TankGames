@@ -77,7 +77,8 @@ public: \
 	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ATankPawn, Camera); } \
 	FORCEINLINE static uint32 __PPO__MoveSpeed() { return STRUCT_OFFSET(ATankPawn, MoveSpeed); } \
 	FORCEINLINE static uint32 __PPO__RightSpeed() { return STRUCT_OFFSET(ATankPawn, RightSpeed); } \
-	FORCEINLINE static uint32 __PPO__RotationSpeed() { return STRUCT_OFFSET(ATankPawn, RotationSpeed); }
+	FORCEINLINE static uint32 __PPO__RotationSpeed() { return STRUCT_OFFSET(ATankPawn, RotationSpeed); } \
+	FORCEINLINE static uint32 __PPO__InterPolationKey() { return STRUCT_OFFSET(ATankPawn, InterPolationKey); }
 
 
 #define SuperTanks_Source_SuperTanks_TankPawn_h_11_PROLOG

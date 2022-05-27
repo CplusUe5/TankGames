@@ -46,11 +46,23 @@ void ATankPawn::Tick(float DeltaSeconds)
 	FVector movePosition = currentLocation + forwardVector * MoveSpeed * TargetForwardAxisValue * DeltaSeconds + (leftVector * TargetSideAxisValue * RightSpeed);
 	SetActorLocation(movePosition, true);
 
-	float yawRotation = RotationSpeed * TargetRotationAxisValue * DeltaSeconds;
+	/*float yawRotation = RotationSpeed * TargetRotationAxisValue * DeltaSeconds;
+	FRotator currentRotation = GetActorRotation();
+	yawRotation = currentRotation.Yaw + yawRotation;
+	FRotator newRotation = FRotator(0, yawRotation, 0);
+	SetActorRotation(newRotation);*/
+
+	
+
+	CurrentRightAxisValue = FMath::Lerp(CurrentRightAxisValue, TargetRotationAxisValue, InterPolationKey);
+	UE_LOG(LogTemp, Warning, TEXT("CurrentRightAxisValue = %f TargetRotationAxisValue = %f"), CurrentRightAxisValue, TargetRotationAxisValue);
+	float yawRotation = RotationSpeed * CurrentRightAxisValue * DeltaSeconds;
 	FRotator currentRotation = GetActorRotation();
 	yawRotation = currentRotation.Yaw + yawRotation;
 	FRotator newRotation = FRotator(0, yawRotation, 0);
 	SetActorRotation(newRotation);
+
+
 
 
 }
