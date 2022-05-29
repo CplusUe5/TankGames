@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SuperTanks.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{0A326872-63A9-4B11-A64E-746585158F3D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SuperTanks.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SuperTanksEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{D17F075B-E8C8-4A57-9418-AA98E63B3D4D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SuperTanks">
+      <UniqueIdentifier>{DE6F0956-C1BB-434B-B0FC-60FAF54062EC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SuperTanks\Cannon.cpp">
+      <Filter>Source\SuperTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SuperTanks\Cannon.h">
+      <Filter>Source\SuperTanks</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SuperTanks\GameStructs.cpp">
+      <Filter>Source\SuperTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SuperTanks\GameStructs.h">
+      <Filter>Source\SuperTanks</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\SuperTanks\SuperTanks.Build.cs">
+      <Filter>Source\SuperTanks</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SuperTanks\SuperTanks.cpp">
+      <Filter>Source\SuperTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SuperTanks\SuperTanks.h">
+      <Filter>Source\SuperTanks</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SuperTanks\SuperTanksGameModeBase.cpp">
+      <Filter>Source\SuperTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SuperTanks\SuperTanksGameModeBase.h">
+      <Filter>Source\SuperTanks</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SuperTanks\TankController.cpp">
+      <Filter>Source\SuperTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SuperTanks\TankController.h">
+      <Filter>Source\SuperTanks</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SuperTanks\TankPawn.cpp">
+      <Filter>Source\SuperTanks</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SuperTanks\TankPawn.h">
+      <Filter>Source\SuperTanks</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -13,14 +13,25 @@ class SUPERTANKS_API ATankController : public APlayerController
 public:
 	ATankController();
 
+
+	virtual void Tick(float DeltaTime) override;
 	virtual void SetupInputComponent() override;
 	virtual void BeginPlay() override;
+	FVector GetMousePos()//геттер для получения позиции мыши
+	{
+		return MousePos;
+	}
 
 protected:
 	UPROPERTY()
 		class ATankPawn* TankPawn;
 
+	UPROPERTY()
+		FVector MousePos;//для хранения данных позиции мыши
+
 	void MoveForward(float Value);
 	void MoveSide(float Value);
 	void MoveRotation(float Value);
+	void Fire();
+
 };

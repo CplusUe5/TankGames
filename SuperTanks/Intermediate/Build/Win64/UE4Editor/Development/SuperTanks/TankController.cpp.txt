@@ -2,4 +2,11 @@ D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Development\SuperTanks\De
 D:\Tanks\SuperTanks\Source\SuperTanks\TankController.h
 D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankController.generated.h
 D:\Tanks\SuperTanks\Source\SuperTanks\TankPawn.h
+D:\Tanks\SuperTanks\Source\SuperTanks\Cannon.h
+D:\Tanks\SuperTanks\Source\SuperTanks\GameStructs.h
+D:\UE\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/UserDefinedStruct.h
+D:\UE\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\UserDefinedStruct.generated.h
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\GameStructs.generated.h
+D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\Cannon.generated.h
 D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\TankPawn.generated.h
+D:\UE\UE_4.27\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h

@@ -2,6 +2,9 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "TankController.h"
+#include "Kismet/KismetMathLibrary.h"
+#include "Components/ArrowComponent.h"
 
 
 ATankPawn::ATankPawn()
@@ -10,15 +13,23 @@ ATankPawn::ATankPawn()
 
 	BodyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Body Mesh"));
 	BodyMesh->SetupAttachment(RootComponent);
+	
 
 	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
 	TurretMesh->SetupAttachment(BodyMesh);
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
 	SpringArm->SetupAttachment(BodyMesh);
+	SpringArm->bDoCollisionTest = false;
+	SpringArm->bInheritPitch = false;
+	SpringArm->bInheritYaw = false;
+	SpringArm->bInheritRoll = false;
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(SpringArm);
+
+	CannonSetupPoint = CreateDefaultSubobject<UArrowComponent>(TEXT("Cannon setup point"));
+	CannonSetupPoint->AttachToComponent(TurretMesh, FAttachmentTransformRules::KeepRelativeTransform);
 }
 
 void ATankPawn::MoveForward(float Value)
@@ -36,6 +47,40 @@ void ATankPawn::MoveRotation(float Value)
 	TargetRotationAxisValue = Value;
 }
 
+void ATankPawn::BeginPlay()
+{
+	Super::BeginPlay();
+	TankController = Cast<ATankController>(GetController());
+
+	SetupCannon();
+}
+
+
+
+void ATankPawn::SetupCannon()
+{
+	if (Cannon)
+	{
+		Cannon->Destroy();
+	}
+	FActorSpawnParameters params;
+	params.Instigator = this;
+	params.Owner = this;
+	Cannon = GetWorld()->SpawnActor<ACannon>(CannonClass, params);
+	Cannon->AttachToComponent(CannonSetupPoint, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+}
+void ATankPawn::Fire()
+{
+	if (Cannon)
+	{
+		Cannon->Fire();
+	}
+}
+
+
+
+
+
 void ATankPawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -46,13 +91,6 @@ void ATankPawn::Tick(float DeltaSeconds)
 	FVector movePosition = currentLocation + forwardVector * MoveSpeed * TargetForwardAxisValue * DeltaSeconds + (leftVector * TargetSideAxisValue * RightSpeed);
 	SetActorLocation(movePosition, true);
 
-	/*float yawRotation = RotationSpeed * TargetRotationAxisValue * DeltaSeconds;
-	FRotator currentRotation = GetActorRotation();
-	yawRotation = currentRotation.Yaw + yawRotation;
-	FRotator newRotation = FRotator(0, yawRotation, 0);
-	SetActorRotation(newRotation);*/
-
-	
 
 	CurrentRightAxisValue = FMath::Lerp(CurrentRightAxisValue, TargetRotationAxisValue, InterPolationKey);
 	UE_LOG(LogTemp, Warning, TEXT("CurrentRightAxisValue = %f TargetRotationAxisValue = %f"), CurrentRightAxisValue, TargetRotationAxisValue);
@@ -62,8 +100,22 @@ void ATankPawn::Tick(float DeltaSeconds)
 	FRotator newRotation = FRotator(0, yawRotation, 0);
 	SetActorRotation(newRotation);
 
+	if (TankController)
+	{
+		FVector MousePos = TankController->GetMousePos();//получили позицию мыши из контроллера
+		FRotator targetRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), MousePos);//параметрами передаём откуда и куда нужно смотреть
+		FRotator currRotation = TurretMesh->GetComponentRotation();//получаем текущее значение разворота
+		targetRotation.Pitch = currRotation.Pitch;
+		targetRotation.Roll = currRotation.Roll;
+		TurretMesh->SetWorldRotation(FMath::Lerp(currRotation, targetRotation, TurretRotationInterpolationKey));//полученный поворот мы устанавливаем в компоненте башни её метод в setworldlocation
 
+	}
+
+
+	
 
 
 }
+
+
 

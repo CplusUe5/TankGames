@@ -59,7 +59,8 @@ public: \
 
 
 #define SuperTanks_Source_SuperTanks_TankController_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__TankPawn() { return STRUCT_OFFSET(ATankController, TankPawn); }
+	FORCEINLINE static uint32 __PPO__TankPawn() { return STRUCT_OFFSET(ATankController, TankPawn); } \
+	FORCEINLINE static uint32 __PPO__MousePos() { return STRUCT_OFFSET(ATankController, MousePos); }
 
 
 #define SuperTanks_Source_SuperTanks_TankController_h_9_PROLOG
