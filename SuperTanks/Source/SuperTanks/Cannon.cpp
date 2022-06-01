@@ -33,17 +33,38 @@ void ACannon::Fire()
 		return;
 	}
 
-	ReadyToFire = false;
-
-	if (Type == ECannonType::FireProjectile)
+	if (ReadyToFire)
 	{
-		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, "Fire-projectile");//первая пушка
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, "Fire-trace");
+		ValueSeriesShots = seriesShots;//приравниваем подсчет к обойме
+		for (size_t i = 0; i < seriesShots; i++)
+		{
+			--ValueSeriesShots;
+			//GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
+		}
 	}
 
+	if (Type == ECannonType::FireProjectile && numberFired != 0)
+	{
+		
+		--numberFired;
+		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, FString::Printf(TEXT("Fire-projectile =  %d\nseriesShots = %d"), numberFired, ValueSeriesShots));//первая пушка
+	}
+	GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
+}
+
+void ACannon::FireSpecial()
+{
+	if (!ReadyToFireSpecial)
+	{
+		return;
+	}
+
+	ReadyToFireSpecial = false;
+
+	if (rType == ECannonType::FireTrace)
+	{
+		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Red, "FireTrace");//первая пушка
+	}
 	GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
 }
 
@@ -60,13 +81,21 @@ void ACannon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	UE_LOG(LogTemp, Warning, TEXT("numberFired = %d seriesShots = %d"),numberFired, seriesShots);
 }
 
 bool ACannon::IsReadyToFire()
 {
 	return ReadyToFire;
 }
+
+bool ACannon::IsReadyToFireSpecial()
+{
+	return ReadyToFireSpecial;
+}
+
 void ACannon::Reload()
 {
 	ReadyToFire = true;
+	ReadyToFireSpecial = true;
 }

@@ -1,9 +1,0 @@
-D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Development\SuperTanks\Definitions.SuperTanks.h
-D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\UE\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Tanks\SuperTanks\Source\SuperTanks/Cannon.h
-D:\Tanks\SuperTanks\Source\SuperTanks\GameStructs.h
-D:\UE\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/UserDefinedStruct.h
-D:\UE\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\UserDefinedStruct.generated.h
-D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\GameStructs.generated.h
-D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Inc\SuperTanks\Cannon.generated.h

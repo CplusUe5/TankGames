@@ -77,6 +77,14 @@ void ATankPawn::Fire()
 	}
 }
 
+void ATankPawn::FireSpecial()
+{
+	if (Cannon)
+	{
+		Cannon->FireSpecial();
+	}
+}
+
 
 
 
@@ -93,7 +101,7 @@ void ATankPawn::Tick(float DeltaSeconds)
 
 
 	CurrentRightAxisValue = FMath::Lerp(CurrentRightAxisValue, TargetRotationAxisValue, InterPolationKey);
-	UE_LOG(LogTemp, Warning, TEXT("CurrentRightAxisValue = %f TargetRotationAxisValue = %f"), CurrentRightAxisValue, TargetRotationAxisValue);
+	//UE_LOG(LogTemp, Warning, TEXT("CurrentRightAxisValue = %f TargetRotationAxisValue = %f"), CurrentRightAxisValue, TargetRotationAxisValue);
 	float yawRotation = RotationSpeed * CurrentRightAxisValue * DeltaSeconds;
 	FRotator currentRotation = GetActorRotation();
 	yawRotation = currentRotation.Yaw + yawRotation;

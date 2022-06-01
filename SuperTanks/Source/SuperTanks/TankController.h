@@ -33,5 +33,5 @@ protected:
 	void MoveSide(float Value);
 	void MoveRotation(float Value);
 	void Fire();
-
+	void FireSpecial();
 };
