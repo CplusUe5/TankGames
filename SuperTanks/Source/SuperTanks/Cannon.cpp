@@ -33,7 +33,7 @@ void ACannon::Fire()
 		return;
 	}
 
-	if (ReadyToFire)
+	if (ReadyToFire)//держим кнопку стрелять
 	{
 		ValueSeriesShots = seriesShots;//приравниваем подсчет к обойме
 		for (size_t i = 0; i < seriesShots; i++)
@@ -41,11 +41,16 @@ void ACannon::Fire()
 			--ValueSeriesShots;
 			//GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
 		}
+		
 	}
 
 	if (Type == ECannonType::FireProjectile && numberFired != 0)
 	{
-		
+		if (ValueSeriesShots == 0)
+		{
+			return;
+		}
+
 		--numberFired;
 		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, FString::Printf(TEXT("Fire-projectile =  %d\nseriesShots = %d"), numberFired, ValueSeriesShots));//первая пушка
 	}
