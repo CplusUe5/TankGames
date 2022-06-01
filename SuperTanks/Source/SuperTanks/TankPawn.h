@@ -25,6 +25,8 @@ public:
 	UFUNCTION()
 		void Fire();
 	UFUNCTION()
+		void FireSpecial();
+	UFUNCTION()
 		void MoveForward(float value);
 	UFUNCTION()
 		void MoveSide(float Value);
@@ -72,8 +74,10 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Components")
 		UArrowComponent* CannonSetupPoint;
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Turret|Cannon")
 		TSubclassOf<ACannon> CannonClass;
+
 	UPROPERTY()
 		ACannon* Cannon;
 

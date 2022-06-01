@@ -19,12 +19,15 @@ public:
 	ACannon();
 
 	void Fire();
+	void FireSpecial();
 	bool IsReadyToFire();
-
+	bool IsReadyToFireSpecial();
+	/*int IsSeriesShots(int x);*/
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	void Reload();
+	
 
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* Mesh;
@@ -40,14 +43,25 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		float FireDamage = 1;
+	
+	//количество выстрелов
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
+		int numberFired = 12;
+	//серия выстрелов//обойма
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
+		int seriesShots = 4;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		ECannonType Type = ECannonType::FireProjectile;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
+		ECannonType rType = ECannonType::FireTrace;
+
 	FTimerHandle ReloadTimerHandle;//структура для работы с таймером
 
 	bool ReadyToFire = false;//признак готовности к стрельбе
-	
+	bool ReadyToFireSpecial = false;
+	int ValueSeriesShots;//подсчет выстрелов
 
 public:	
 	// Called every frame
