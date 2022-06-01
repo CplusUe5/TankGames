@@ -1,2 +1,0 @@
-D:\Tanks\SuperTanks\Intermediate\Build\Win64\UE4Editor\Development\SuperTanks\Definitions.SuperTanks.h
-D:\Tanks\SuperTanks\Source\SuperTanks\SuperTanks.h
