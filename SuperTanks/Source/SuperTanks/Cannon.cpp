@@ -32,28 +32,42 @@ void ACannon::Fire()
 	{
 		return;
 	}
+	ReadyToFire = false;
 
-	if (ReadyToFire)//держим кнопку стрелять
-	{
-		ValueSeriesShots = seriesShots;//приравниваем подсчет к обойме
-		for (size_t i = 0; i < seriesShots; i++)
-		{
-			--ValueSeriesShots;
-			//GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
-		}
-		
-	}
+
+	//if (ReadyToFire)//держим кнопку стрелять
+	//{
+	//	ValueSeriesShots = seriesShots;//приравниваем подсчет к обойме
+	//	for (size_t i = 0; i < seriesShots; i++)
+	//	{
+	//		--ValueSeriesShots;
+	//		//GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
+	//	}
+	//	ValueSeriesShots = seriesShots;
+	//	
+	//}
 
 	if (Type == ECannonType::FireProjectile && numberFired != 0)
 	{
-		if (ValueSeriesShots == 0)
+		/*if (ValueSeriesShots == 0)
 		{
 			return;
-		}
+		}*/
 
-		--numberFired;
-		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, FString::Printf(TEXT("Fire-projectile =  %d\nseriesShots = %d"), numberFired, ValueSeriesShots));//первая пушка
+		//--numberFired;
+		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, FString::Printf(TEXT("Fire-projectile =  %d\nseriesShots = %d"), numberFired, ValueSeriesShots));//первая пушка	
+		AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
+		if (projectile)
+		{
+			projectile->start();
+		}
+		
 	}
+	else
+	{
+			GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, "Fire - trace");
+	}
+	
 	GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
 }
 
@@ -69,6 +83,11 @@ void ACannon::FireSpecial()
 	if (rType == ECannonType::FireTrace)
 	{
 		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Red, "FireTrace");//первая пушка
+		AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
+		if (projectile)
+		{
+			projectile->start();
+		}
 	}
 	GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
 }
