@@ -2,10 +2,12 @@
 
 #pragma once
 
+#include "Projectile.h"
 #include "CoreMinimal.h"
 #include "GameStructs.h"
 #include "GameFramework/Actor.h"
 #include "Cannon.generated.h"
+
 
 class UArrowComponent;
 
@@ -29,11 +31,14 @@ protected:
 	void Reload();
 	
 
-	UPROPERTY(VisibleAnywhere,BlueprintReadWrite, Category = "Components")
+	UPROPERTY(VisibleDefaultsOnly,BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* Mesh;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Components")
 		UArrowComponent* ProjectileSpawnPoint;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire|params")
+		TSubclassOf<AProjectile> ProjectileClass;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		float FireRate = 1;

@@ -42,16 +42,16 @@ protected:
 		ATankController* TankController;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		class UStaticMeshComponent* BodyMesh;
+		UStaticMeshComponent* BodyMesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		class UStaticMeshComponent* TurretMesh;
+		UStaticMeshComponent* TurretMesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		class USpringArmComponent* SpringArm;
+		USpringArmComponent* SpringArm;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
-		class UCameraComponent* Camera;
+		UCameraComponent* Camera;
 
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Movement|Speed")
@@ -85,6 +85,7 @@ protected:
 	float TargetSideAxisValue = 0.0f;
 	float TargetRotationAxisValue = 0.0f;
 	float CurrentRightAxisValue = 0.0f;
+
 
 	void SetupCannon();
 };
