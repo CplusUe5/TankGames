@@ -5,6 +5,7 @@
 #include "TankController.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/ArrowComponent.h"
+#include "Cannon.h"
 
 
 ATankPawn::ATankPawn()
@@ -12,10 +13,8 @@ ATankPawn::ATankPawn()
 	PrimaryActorTick.bCanEverTick = true;
 
 	BodyMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Body Mesh"));
-	//BodyMesh->SetupAttachment(RootComponent);
 	RootComponent = BodyMesh;
 	
-
 	TurretMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Turret Mesh"));
 	TurretMesh->SetupAttachment(BodyMesh);
 
@@ -52,11 +51,8 @@ void ATankPawn::BeginPlay()
 {
 	Super::BeginPlay();
 	TankController = Cast<ATankController>(GetController());
-
 	SetupCannon();
 }
-
-
 
 void ATankPawn::SetupCannon()
 {
@@ -86,10 +82,6 @@ void ATankPawn::FireSpecial()
 	}
 }
 
-
-
-
-
 void ATankPawn::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
@@ -102,7 +94,6 @@ void ATankPawn::Tick(float DeltaSeconds)
 
 
 	CurrentRightAxisValue = FMath::Lerp(CurrentRightAxisValue, TargetRotationAxisValue, InterPolationKey);
-	//UE_LOG(LogTemp, Warning, TEXT("CurrentRightAxisValue = %f TargetRotationAxisValue = %f"), CurrentRightAxisValue, TargetRotationAxisValue);
 	float yawRotation = RotationSpeed * CurrentRightAxisValue * DeltaSeconds;
 	FRotator currentRotation = GetActorRotation();
 	yawRotation = currentRotation.Yaw + yawRotation;
@@ -111,19 +102,13 @@ void ATankPawn::Tick(float DeltaSeconds)
 
 	if (TankController)
 	{
-		FVector MousePos = TankController->GetMousePos();//получили позицию мыши из контроллера
-		FRotator targetRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), MousePos);//параметрами передаём откуда и куда нужно смотреть
-		FRotator currRotation = TurretMesh->GetComponentRotation();//получаем текущее значение разворота
+		FVector MousePos = TankController->GetMousePos();
+		FRotator targetRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), MousePos);
+		FRotator currRotation = TurretMesh->GetComponentRotation();
 		targetRotation.Pitch = currRotation.Pitch;
 		targetRotation.Roll = currRotation.Roll;
-		TurretMesh->SetWorldRotation(FMath::Lerp(currRotation, targetRotation, TurretRotationInterpolationKey));//полученный поворот мы устанавливаем в компоненте башни её метод в setworldlocation
-
+		TurretMesh->SetWorldRotation(FMath::Lerp(currRotation, targetRotation, TurretRotationInterpolationKey));
 	}
-
-
-	
-
-
 }
 
 

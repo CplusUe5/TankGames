@@ -1,23 +1,20 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "TankController.h"
 #include "TankPawn.h"
 #include "DrawDebugHelpers.h"
 
 ATankController::ATankController()
 {
-	bShowMouseCursor = true;//параметр видимости курсора
+	bShowMouseCursor = true;
 }
 
 void ATankController::Tick(float DeltaTime)
 {
-	FVector mouseDerection;//позиция куда нужно смотреть
-	DeprojectMousePositionToWorld(MousePos, mouseDerection);//для получения позиции курсора мыши
-	FVector PawnPos = TankPawn->GetActorLocation();//позиция танка
+	FVector mouseDerection;
+	DeprojectMousePositionToWorld(MousePos, mouseDerection);
+	FVector PawnPos = TankPawn->GetActorLocation();
 	MousePos.Z = PawnPos.Z;
-	FVector dir = MousePos - PawnPos;//вектор направления от танка к позиции
-	dir.Normalize();//нормализуем dir
+	FVector dir = MousePos - PawnPos;
+	dir.Normalize();
 	MousePos = PawnPos + dir * 1000;
 	DrawDebugLine(GetWorld(), PawnPos, MousePos, FColor::Green, false, 0.1f, 0, 5);
 }

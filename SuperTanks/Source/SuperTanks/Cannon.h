@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "Projectile.h"
@@ -15,23 +13,20 @@ UCLASS()
 class SUPERTANKS_API ACannon : public AActor
 {
 	GENERATED_BODY()
-	
 public:	
-	// Sets default values for this actor's properties
 	ACannon();
 
 	void Fire();
 	void FireSpecial();
 	bool IsReadyToFire();
 	bool IsReadyToFireSpecial();
-	/*int IsSeriesShots(int x);*/
+	int IsSeriesShots(int x);
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	void Reload();
 	
 
-	UPROPERTY(VisibleDefaultsOnly,BlueprintReadWrite, Category = "Components")
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Components")
 	UStaticMeshComponent* Mesh;
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Components")
@@ -49,10 +44,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		float FireDamage = 1;
 	
-	//количество выстрелов
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		int numberFired = 12;
-	//серия выстрелов//обойма
+	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		int seriesShots = 4;
 
@@ -62,14 +56,12 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Fire params")
 		ECannonType rType = ECannonType::FireTrace;
 
-	FTimerHandle ReloadTimerHandle;//структура для работы с таймером
+	FTimerHandle ReloadTimerHandle;
 
-	bool ReadyToFire = false;//признак готовности к стрельбе
+	bool ReadyToFire = false;
 	bool ReadyToFireSpecial = false;
-	int ValueSeriesShots;//подсчет выстрелов
+	int ValueSeriesShots;
 
 public:	
-	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
 };

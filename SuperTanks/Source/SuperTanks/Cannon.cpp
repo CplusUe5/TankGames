@@ -1,17 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "Cannon.h"
+#include "CollisionQueryParams.h"
+#include "DrawDebugHelpers.h"
 #include "Components/ArrowComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "TimerManager.h"
 #include "Engine/Engine.h"
 
-
-// Sets default values
 ACannon::ACannon()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	USceneComponent* sceeneCpm = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
@@ -22,8 +19,6 @@ ACannon::ACannon()
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<UArrowComponent>(TEXT("Spawn point"));
 	ProjectileSpawnPoint->SetupAttachment(Mesh);
-
-	
 }
 
 void ACannon::Fire()
@@ -54,18 +49,40 @@ void ACannon::Fire()
 			return;
 		}*/
 
-		//--numberFired;
+		--numberFired;
 		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, FString::Printf(TEXT("Fire-projectile =  %d\nseriesShots = %d"), numberFired, ValueSeriesShots));//первая пушка	
 		AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
 		if (projectile)
 		{
-			projectile->start();
+			projectile->Start();
 		}
 		
 	}
 	else
 	{
 			GEngine->AddOnScreenDebugMessage(10, 1, FColor::Green, "Fire - trace");
+			FHitResult hitResult;//результат луча
+			FCollisionQueryParams traceParams = FCollisionQueryParams(FName(TEXT("FireTrace")), true, this);//наши параметры луча
+			traceParams.bTraceComplex = true;//свойства
+			traceParams.bReturnPhysicalMaterial = false;//свойства
+			FVector start = ProjectileSpawnPoint->GetComponentLocation();//старт луча
+			FVector end = ProjectileSpawnPoint->GetForwardVector()* FireRange + start;//конец луча
+
+			//проверяем луч, выпускается ли
+			if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECollisionChannel::ECC_Visibility, traceParams))
+			{
+		
+				DrawDebugLine(GetWorld(), start, hitResult.Location, FColor::Red, false, 0.5f, 0, 5);//меняем цвет если не выпускается
+																									
+				if (hitResult.Actor.Get())
+				{
+					hitResult.Actor.Get()->Destroy();
+				}
+				else
+				{
+					DrawDebugLine(GetWorld(), start, end, FColor::Red, false, 0.5f, 0, 5);
+				}
+			}
 	}
 	
 	GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
@@ -82,29 +99,25 @@ void ACannon::FireSpecial()
 
 	if (rType == ECannonType::FireTrace)
 	{
-		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Red, "FireTrace");//первая пушка
+		GEngine->AddOnScreenDebugMessage(10, 1, FColor::Red, "FireTrace");
 		AProjectile* projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPoint->GetComponentLocation(), ProjectileSpawnPoint->GetComponentRotation());
 		if (projectile)
 		{
-			projectile->start();
+			projectile->Start();
 		}
 	}
 	GetWorld()->GetTimerManager().SetTimer(ReloadTimerHandle, this, &ACannon::Reload, 1 / FireRate, false);
 }
 
-// Called when the game starts or when spawned
 void ACannon::BeginPlay()
 {
 	Super::BeginPlay();
 	Reload();
-
 }
 
-// Called every frame
 void ACannon::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 	UE_LOG(LogTemp, Warning, TEXT("numberFired = %d seriesShots = %d"),numberFired, seriesShots);
 }
 

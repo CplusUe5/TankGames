@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -12,12 +10,11 @@ class SUPERTANKS_API ATankController : public APlayerController
 	GENERATED_BODY()
 public:
 	ATankController();
-
-
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupInputComponent() override;
 	virtual void BeginPlay() override;
-	FVector GetMousePos()//геттер для получения позиции мыши
+
+	FVector GetMousePos()
 	{
 		return MousePos;
 	}
@@ -27,7 +24,7 @@ protected:
 		class ATankPawn* TankPawn;
 
 	UPROPERTY()
-		FVector MousePos;//для хранения данных позиции мыши
+		FVector MousePos;
 
 	void MoveForward(float Value);
 	void MoveSide(float Value);
